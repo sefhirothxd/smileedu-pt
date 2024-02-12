@@ -41,6 +41,7 @@ public onNewStudent: EventEmitter <any> = new EventEmitter();
 
 
 
+
  getDatosFormulario():void {
   const nom_persona = this.formulario.get('nombre')?.value;
   const ape_pate_pers  = this.formulario.get('apellidoPaterno')?.value;

@@ -39,6 +39,15 @@ export class CardComponent {
       });
   }
 
+  deleteAlumno(id: number):void {
+    this.http.delete(`https://smileedu-backend-production.up.railway.app/api/alumnos/${id}`)
+    .subscribe((respuesta:any) => {
+      console.log(respuesta);
+    });
+    this.refreshAlumnos();
+  }
+
+
   refreshAlumnos(): void {
     this.http.get('https://smileedu-backend-production.up.railway.app/api/alumnos')
       .subscribe((response: any) => {
