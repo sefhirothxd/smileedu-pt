@@ -43,8 +43,8 @@ export class CardComponent {
     this.http.delete(`https://smileedu-backend-production.up.railway.app/api/alumnos/${id}`)
     .subscribe((respuesta:any) => {
       console.log(respuesta);
+      this.refreshAlumnos();
     });
-    this.refreshAlumnos();
   }
 
 
