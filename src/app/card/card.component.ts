@@ -29,7 +29,7 @@ export class CardComponent {
   constructor(private readonly http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('http://localhost:5001/api/alumnos')
+    this.http.get('https://smileedu-backend-production.up.railway.app/api/alumnos')
       .subscribe((response: any) => {
 
         //restructure array object
@@ -40,7 +40,7 @@ export class CardComponent {
   }
 
   refreshAlumnos(): void {
-    this.http.get('http://localhost:5001/api/alumnos')
+    this.http.get('https://smileedu-backend-production.up.railway.app/api/alumnos')
       .subscribe((response: any) => {
         this.alumnos = response;
         this.addAge(this.alumnos);

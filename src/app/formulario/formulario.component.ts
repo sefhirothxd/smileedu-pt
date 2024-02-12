@@ -60,7 +60,7 @@ public onNewStudent: EventEmitter <any> = new EventEmitter();
 
   console.log(persona);
 
-  this.http.post('http://localhost:5001/api/alumnos', persona)
+  this.http.post('https://smileedu-backend-production.up.railway.app/api/alumnos', persona)
   .subscribe((respuesta:any) => {
     console.log(respuesta);
   });
