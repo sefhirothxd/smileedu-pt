@@ -10,7 +10,7 @@
     "serve:ssr:pt-smiledu": "node dist/pt-smiledu/server/server.mjs",
     "dev:ssr": "ng run test:serve-ssr",
     "serve:ssr": "node dist/test/server/main.js",
-    "build:ssr": "ng build && ng run test:server",
+    "build:ssr": "ng build ",
     "prerender": "ng run test:prerender",
     "vercel-build": "npm run build:ssr"
   },
