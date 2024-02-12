@@ -64,10 +64,10 @@ public onNewStudent: EventEmitter <any> = new EventEmitter();
   this.http.post('https://smileedu-backend-production.up.railway.app/api/alumnos', persona)
   .subscribe((respuesta:any) => {
     console.log(respuesta);
+    this.onNewStudent.emit();
   });
 
   this.formulario.reset();
-  this.onNewStudent.emit();
   const modal = document.getElementById('modalForm');
   modal?.classList.add('hidden');
 }
