@@ -27,7 +27,7 @@ export class FormularioEstudianteComponent {
  public fullAge:string = '';
 
 @Output()
-public onNewStudent: EventEmitter <any> = new EventEmitter();
+public RefreshAddAlumno: EventEmitter <any> = new EventEmitter();
 
 
  formulario = new FormGroup({
@@ -59,13 +59,15 @@ public onNewStudent: EventEmitter <any> = new EventEmitter();
      foto_ruta
   }
 
-  console.log(persona);
 
+  debugger
   this.http.post('https://smileedu-backend-production.up.railway.app/api/alumnos', persona)
   .subscribe((respuesta:any) => {
     console.log(respuesta);
-    this.onNewStudent.emit();
+    console.log('emit  formulario')
   });
+
+  this.RefreshAddAlumno.emit();
 
   this.formulario.reset();
   const modal = document.getElementById('modalForm');

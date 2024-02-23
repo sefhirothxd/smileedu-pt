@@ -35,7 +35,7 @@ export class CardComponent {
         //restructure array object
         this.alumnos = response;
         this.addAge(this.alumnos);
-        console.log(response);
+        // console.log(response);
       });
   }
 

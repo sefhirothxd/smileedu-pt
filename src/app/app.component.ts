@@ -19,7 +19,8 @@ export class AppComponent {
   @ViewChild(CardComponent)
   public child!: CardComponent;
 
-  public activar():void{
+ RefreshAddAlumno():void{
+  console.log('Refresh main')
     this.child.refreshAlumnos();
   }
 
